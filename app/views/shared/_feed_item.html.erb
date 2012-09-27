@@ -1,4 +1,9 @@
 <li id="<%= feed_item.id %>">
+	<% if feed_item.user.image.present? %>
+		<p><%= image_tag feed_item.user.image_url(:thumb).to_s %></p>
+	<% else %>
+		<p><%= image_tag ('default_user_profile_small.jpg') %></p>
+	<% end %>
     <span class="user">
       <%= link_to feed_item.user.name, feed_item.user %>
     </span>

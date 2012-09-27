@@ -36,6 +36,9 @@ GEM
     bootstrap-will_paginate (0.0.6)
       will_paginate
     builder (3.0.3)
+    carrierwave (0.6.2)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -88,6 +91,7 @@ GEM
     rake (0.9.2.2)
     rdoc (3.12)
       json (~> 1.4)
+    rmagick (2.13.1)
     sass (3.2.1)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -118,11 +122,13 @@ DEPENDENCIES
   bcrypt-ruby (= 3.0.1)
   bootstrap-sass (= 2.0.4)
   bootstrap-will_paginate (= 0.0.6)
+  carrierwave
   coffee-rails (= 3.2.2)
   jquery-rails
   mysql2
   pg (= 0.12.2)
   rails (= 3.2.8)
+  rmagick
   sass-rails (= 3.2.5)
   therubyracer
   uglifier (= 1.2.3)

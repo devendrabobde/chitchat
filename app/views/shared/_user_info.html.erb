@@ -1,4 +1,9 @@
 <a href="<%= user_path(current_user) %>">
+	<% if current_user.image.present? %>
+		<p><%= image_tag current_user.image_url(:thumb).to_s %></p>
+	<% else %>
+		<p><%= image_tag ('default_user_profile_small.jpg') %></p>
+	<% end %>
 </a>
 <h1>
   <%= current_user.name %>

@@ -2,6 +2,11 @@
 <div class="row">
   <aside class="span4">
     <section>
+    	<% if @user.image.present? %>
+			<p><%= image_tag @user.image_url(:thumb).to_s %></p>
+		<% else %>
+			<p><%= image_tag ('default_user_profile_small.jpg') %></p>
+		<% end %>
       <h1><%= @user.name %></h1>
       <span><%= link_to "view my profile", @user %></span>
       <span><b>Microposts:</b> <%= @user.microposts.count %></span>
@@ -11,7 +16,11 @@
       <% if @users.any? %>
         <div class="user_avatars">
           <% @users.each do |user| %>
-          
+          <% if current_user.image.present? %>
+				<p><%= image_tag user.image_url(:thumb).to_s %></p>
+			<% else %>
+				<p><%= image_tag ('default_user_profile_small.jpg') %></p>
+			<% end %> 
           <% end %>
         </div>
       <% end %>
@@ -21,6 +30,7 @@
     <h3><%= @title %></h3>
     <% if @users.any? %>
       <ul class="users">
+      	<%= image_tag @user.image_url(:thumb) if @user.image? %>
         <%= render @users %>
       </ul>
       <%= will_paginate %>

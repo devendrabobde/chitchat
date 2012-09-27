@@ -2,6 +2,12 @@
 <div class="row">
   <aside class="span4">
     <section>
+    	<% if @user.image.present? %>
+			<p><%= image_tag @user.image_url(:thumb).to_s %></p>
+		<% else %>
+			<p><%= image_tag ('default_user_profile_small.jpg') %></p>
+			<p><%= link_to "Add profile Picture", edit_user_path(current_user) %></p>
+		<% end %>
       <h1>
         <%= @user.name %>
       </h1>
