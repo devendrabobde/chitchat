@@ -237,4 +237,7 @@ aside {
     margin-bottom: 5px;
   }
 }
-
+/*---FOOTER COPYRIGHT---*/
+#footer #copyright {font-size: 9px; line-height: 40px; float: right; padding:0 15px; padding: 0 10px; position: relative; z-index: 1;}
+#footer #copyright a {color: #ddd; border-bottom: 1px dotted #ddd;}
+#footer #copyright a:hover {border-bottom: 1px solid #ddd;}
