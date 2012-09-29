@@ -1,5 +1,7 @@
 Chitchat::Application.routes.draw do
   
+  get "password_resets/new"
+
     resources :users do
     member do
       get :following, :followers
@@ -8,6 +10,7 @@ Chitchat::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
+  resources :password_resets
   # get "static_pages/home"
   # get "static_pages/help"
   # get "static_pages/about"

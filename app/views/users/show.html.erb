@@ -26,4 +26,44 @@
       <%= will_paginate @microposts %>
     <% end %>
   </div>
-</div>
+
+  <div class="span8">
+  	<h3> Your Personel Profile Information </h3>	
+  	<br />
+  	<ol class="microposts">
+  		Name : <%= current_user.name %>
+  	</ol>
+  	<ol class="microposts">
+  		Primary Email : <%= current_user.email %>
+  	</ol>
+  	<ol class="microposts">
+  		Gender : <%= current_user.gender %>
+  	</ol>
+  	<ol class="microposts">
+  		Date Of Birth : <%= current_user.date_of_birth %>
+  	</ol>
+  	<br />
+  	
+  	
+  	<%= will_paginate @microposts %>
+  </div>
+  
+	<div class="span8">
+		<h3> Your Contact Information </h3>	<br />	
+		<ol class="microposts">
+  		Country : <%= current_user.country %>
+  	</ol>
+  	<ol class="microposts">
+  		State : <%= current_user.state %>
+  	</ol>
+  	<ol class="microposts">
+  		City : <%= current_user.city %>
+  	</ol>
+  	<ol class="microposts">
+  		address : <%= current_user.address %>
+  	</ol>
+  	<ol class="microposts">
+  		Mobile No. : <%= current_user.mobile_no %>
+  	</ol>
+  	<br />
+  	<%= will_paginate @microposts %>
