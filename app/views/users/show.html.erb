@@ -9,7 +9,7 @@
 			<p><%= link_to "Add profile Picture", edit_user_path(current_user) %></p>
 		<% end %>
       <h1>
-        <%= @user.name %>
+        <%= link_to @user.name %>
       </h1>
     </section>
     <section>

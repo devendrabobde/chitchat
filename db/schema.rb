@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120927161716) do
+ActiveRecord::Schema.define(:version => 20120928092810) do
+
+  create_table "authentications", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
@@ -36,12 +44,19 @@ ActiveRecord::Schema.define(:version => 20120927161716) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
+    t.datetime "created_at",                                      :null => false
+    t.datetime "updated_at",                                      :null => false
     t.string   "password_digest"
     t.string   "remember_token"
-    t.boolean  "admin",           :default => false
+    t.boolean  "admin",                        :default => false
     t.string   "image"
+    t.string   "gender"
+    t.date     "date_of_birth"
+    t.string   "country"
+    t.string   "state"
+    t.string   "city"
+    t.string   "address"
+    t.integer  "mobile_no",       :limit => 8
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

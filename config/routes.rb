@@ -1,6 +1,6 @@
 Chitchat::Application.routes.draw do
- 
-  resources :users do
+  
+    resources :users do
     member do
       get :following, :followers
     end
@@ -24,6 +24,7 @@ Chitchat::Application.routes.draw do
   match '/news', to: 'static_pages#news'
   
   match '/delete_account', to: 'users#delete_account'
+ # match '/change_password', to: 'users#change_password'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

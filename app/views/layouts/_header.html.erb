@@ -16,6 +16,7 @@
                 <li><%= link_to "Profile", current_user %></li>
                 <li><%= link_to "Delete your Account", delete_account_path, data: { confirm: "R You sure, do you want to delete your account?" }%></li>
                 <li><%= link_to "Edit Your Profile", edit_user_path(current_user) %></li>
+                
                 <li class="divider"></li>
                 <li>
                   <%= link_to "Sign out", signout_path, method: "delete" %>
