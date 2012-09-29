@@ -17,7 +17,7 @@ Chitchat::Application.configure do
   config.action_mailer.raise_delivery_errors = false
   
   # Other config items omitted.
-  config.action_mailer.default_url_options = { :host => "localhost:3000" }
+  config.action_mailer.default_url_options = { :host => "friendsconnect.herokuapp.com" }
   
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
