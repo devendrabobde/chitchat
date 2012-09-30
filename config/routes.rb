@@ -24,6 +24,7 @@ Chitchat::Application.routes.draw do
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
+  #match "dispatch_email", to: "static_pages#dispatch_email", as: "dispatch_email", method: :post
   match '/news', to: 'static_pages#news'
   
   match '/delete_account', to: 'users#delete_account'

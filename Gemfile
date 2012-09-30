@@ -8,6 +8,8 @@ gem 'bootstrap-will_paginate', '0.0.6'
 gem "rmagick"
 gem "carrierwave"
 gem "opinio"
+# gem "recaptcha", require: "recaptcha/rails"
+
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
