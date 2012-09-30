@@ -29,7 +29,7 @@ module Chitchat
   # }
 # 
   # config.action_mailer.default_url_options = {
-    # :host => "www.gmail.com"
+    # :host => "http://localhost:3000"
   # }
     
     # Settings in config/environments/* take precedence over those specified here.
