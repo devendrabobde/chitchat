@@ -12,21 +12,25 @@ class StaticPagesController < ApplicationController
   def about
   end
   
-  # def new
-     # @message = Message.new
-  # end
+  
   
   def contact
-   # @message = Message.new
-    # @message = Message.new(params[:message])
-#     
-    # if @message.valid?
-      # NotificationsMailer.new_message(@message).deliver
-      # redirect_to(root_path, :notice => "Message was successfully sent.")
-    # else
-      # flash.now.alert = "Please fill all fields."
-      # render :new
-    # end
+   if request.post? and params[:contact]
+      if contact = Contact.new(params[:contact])
+        contact.name = "#{params[:contact][:name]}"
+        contact.email = "#{params[:contact][:email]}"
+        contact.message = "#{params[:contact][:message]}"
+        
+        if contact.save
+          NotificationsMailer.new_contact(contact).deliver
+          flash[:notice] = "Thank you for contacting us!."
+          redirect_to("/")
+        else
+          render :contact
+        end
+        
+      end
+    end
   end
   
    # def dispatch_email

@@ -1,3 +1,19 @@
 <% provide(:title, 'Contact Us') %>
 	<h1>Contact Us</h1>
-	
+<div class="row">
+  <div class="span6 offset3">	
+		<%= form_for :contact, :url =>{:action => :contact, :controller => "static_pages"} do |f| %>
+    		<p> <%= f.label :name %> </p>
+    		<p> <%= f.text_field :name%> </p>
+
+    		<p> <%= f.label :email %> </p>
+    		<p> <%= f.email_field :email%> </p>
+
+    		<p> <%= f.label :message %> </p>
+    		<p> <%= f.text_area :message %> </p>
+
+    		<p> <%= f.submit %> </p>
+
+    	<% end %>
+    </div>
+   </div>
