@@ -20,7 +20,8 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to the ChitChat.com!"
+      UserMailer.registration_confirmation(@user).deliver
+      flash[:success] = "Welcome to the AirtelFriends.com!"
       redirect_to @user
     else
       render 'new'
