@@ -28,6 +28,8 @@ Chitchat::Application.routes.draw do
   match '/news', to: 'static_pages#news'
   
   match '/delete_account', to: 'users#delete_account'
+  resources :friendships
+  #map.resources :friendships
  # match '/change_password', to: 'users#change_password'
   # The priority is based upon order of creation:
   # first created -> highest priority.

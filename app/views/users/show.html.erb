@@ -67,3 +67,28 @@
   	</ol>
   	<br />
   	<%= will_paginate @microposts %>
+ <p>Name: <%= @user.name %></p>  	
+ <p><%= link_to "Find Friends", users_path %></p>
+
+    <h2>Your Friends</h2>
+   
+   <ul>
+   <% for friendship in @user.friendships %>
+    <li>
+     <%= link_to friendship.friend.name %>
+     <%= link_to "remove", friendship, :method => :delete, :confirm => "R U sure u want to unfriend" %>
+    </li>
+    <% end %>
+   </ul>
+<!-- <ul>
+<% for user in current_user.friends %>
+<li><%= user.name %></li>
+<% end %>
+</ul> -->
+ 
+ <h2>Users Who Have Befriended You</h2>
+ <ul>
+  <% for user in @user.inverse_friends %>
+   <li><%= user.name %></li>
+   <% end %>
+ </ul>
