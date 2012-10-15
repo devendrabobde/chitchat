@@ -48,8 +48,8 @@ Chitchat::Application.configure do
     :address              => "smtp.gmail.com",
     :port                 => 587,
     :domain               => "www.gmail.com",
-    :user_name            => "devendrabobde89@gmail.com",
-    :password             => "devendra1989",
+    :user_name            => "user@gmail.com",
+    :password             => "123456",
     :authentication       => :plain,
     :enable_starttls_auto => true
   }
